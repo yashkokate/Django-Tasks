@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pet List</title>
+</head>
+<body>
+    <h1>Pet List</h1>
+    <a href="{% url 'pet_add' %}">Add Pet</a>
+    <ul>
+        {% for pet in object_list %}
+            <li>
+                {{ pet.first_name }} {{ pet.last_name }} - <a href="{% url 'pet_edit' pet.pk %}">Edit</a> - <a href="{% url 'pet_delete' pet.pk %}">Delete</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
