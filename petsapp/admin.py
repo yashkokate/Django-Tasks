@@ -1,6 +1,7 @@
 from django.contrib import admin
-from .models import Pet
+from .models import Media
 
-@admin.register(Pet)
-class PetAdmin(admin.ModelAdmin):
-    list_display = ('first_name', 'last_name', 'email', 'phone_number')
+@admin.register(Media)
+class MediaAdmin(admin.ModelAdmin):
+    list_display = ('name', 'media_type', 'format', 'size_mb', 'duration_secs')
+    list_filter = ('media_type',)

@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <header class="hero bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4">Welcome to Our Website</h1>
+            <p class="lead">Providing exceptional service and support.</p>
+            <a href="{% url 'contact_us' %}" class="btn btn-light btn-lg">Get in Touch</a>
+        </div>
+    </header>
+
+    <section class="features py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Our Features</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Feature 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Feature 1</h5>
+                            <p class="card-text">Description of feature 1. What makes it unique and why it's beneficial.</p>
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Feature 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Feature 2</h5>
+                            <p class="card-text">Description of feature 2. Highlighting its importance and advantages.</p>
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Feature 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Feature 3</h5>
+                            <p class="card-text">Description of feature 3. Details on how it can benefit users.</p>
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">About Us</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Our Mission</h3>
+                    <p>Our mission is to deliver high-quality services and create an outstanding experience for our customers. We are committed to excellence and dedicated to meeting the needs of our clients.</p>
+                </div>
+                <div class="col-md-6">
+                    <h3>Our Vision</h3>
+                    <p>We envision a future where our services make a significant impact and bring positive change. Our goal is to be a leader in our industry and set new standards for quality and innovation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-info py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Contact Information</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Address</h5>
+                    <p>1234 Street Name, City, Country</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Phone</h5>
+                    <p>(123) 456-7890</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Email</h5>
+                    <p>info@example.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta bg-primary text-white text-center py-5">
+        <div class="container">
+            <h2>Ready to Get Started?</h2>
+            <p>Contact us today to learn more about our services and how we can assist you.</p>
+            <a href="{% url 'contact_us' %}" class="btn btn-light btn-lg">Contact Us</a>
+        </div>
+    </section>
+{% endblock %}

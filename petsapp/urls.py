@@ -1,9 +1,9 @@
 from django.urls import path
-from .views import PetListView, PetCreateView, PetUpdateView, PetDeleteView
+from . import views
 
 urlpatterns = [
-    path('', PetListView.as_view(), name='pet_list'),
-    path('pet/add/', PetCreateView.as_view(), name='pet_add'),
-    path('pet/<int:pk>/edit/', PetUpdateView.as_view(), name='pet_edit'),
-    path('pet/<int:pk>/delete/', PetDeleteView.as_view(), name='pet_delete'),
+    path('', views.home_page, name='home'),
+    path('about/', views.about_us, name='about_us'),
+    path('service/', views.service_page, name='service_page'),
+    path('contact/', views.contact_us, name='contact_us'),
 ]
